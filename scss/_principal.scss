@@ -1,0 +1,22 @@
+.principal {
+    padding-top: $topbar-height;
+    z-index: 999; // One more than topbar
+    .principal__container {
+        background-color: rgb(32, 32, 32);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: calc(100vh - #{$topbar-height});
+        background-image: url('../img/Ignition\ Landing.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 72px;
+            text-transform: uppercase;
+        }
+    }
+}

@@ -1,0 +1,66 @@
+.topbar {
+    background-color: #202020;
+    width: 100%;
+    position: fixed;
+    z-index: 998; // One less than topbar
+    height: $topbar-height;
+    max-height: $topbar-height;
+
+    ul {
+        display: flex;
+        align-items: center;
+        max-height: $topbar-height;
+
+        .topbar__brand {
+            width: 20%;
+           
+            img {
+                margin-left:20px;
+                width:100%;
+           
+                @include respond-below(lg) {
+                    width: 100%;
+                    padding: unset;
+                }
+            }
+            @include respond-below(sm) {
+                width: 60%;
+            }
+        }
+
+        .topbar__item {
+            padding: 30px;
+            font-size: 16px;
+            letter-spacing: 0.05rem;
+            text-transform: uppercase;
+            color: white;
+            font-weight: 500;
+            
+            @include respond-below(md) {
+                display: none;
+            }
+
+            @include respond-below(lg) {
+                font-size: 10px;
+            }
+
+            &:nth-child(2) {
+                margin-left: auto;
+            }
+
+            i {
+                color: white;
+                font-size: 30px;
+                padding: 0 10px;
+            }
+        }
+        
+        .topbar__item--menu {
+            display: none;
+            @include respond-below(md) {
+                display: inline;
+                margin-left: auto;
+            }
+        }
+    }  
+}
